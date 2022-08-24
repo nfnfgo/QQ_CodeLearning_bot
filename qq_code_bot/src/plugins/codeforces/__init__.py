@@ -1,14 +1,16 @@
 '''Implement Functions About CodeForce API reading'''
 
 import asyncio
+from email import message
 import time
 import random
 
 import aiohttp
 from nonebot import on_command
-from nonebot.adapters.onebot.v11 import Bot, Event
+from nonebot.adapters.onebot.v11 import Bot, Event, MessageSegment, Message
 
-cf_list_handle = on_command('cf_list')
+cf_list_handle = on_command('cf_list', block=True)
+cf_user_handle = on_command('cf_user', block=True)
 
 
 async def cf_request(method_param: str):
@@ -16,6 +18,7 @@ async def cf_request(method_param: str):
         async with session.get(f'https://codeforces.com/api/{method_param}') as res:
             data_dict = await res.json()
     return data_dict
+
 
 @cf_list_handle.handle()
 async def get_contests(bot: Bot, event: Event):
@@ -57,12 +60,21 @@ async def get_contests(bot: Bot, event: Event):
     await cf_list_handle.finish(re_text)
 
 
-async def get_user(handle: str, rating_info: bool = True):
-    handle = str(handle)
+@cf_user_handle.handle()
+async def get_user(bot: Bot, event: Event):
+    text = event.get_plaintext()
+    # 如果用户没有输入参数
+    if text == '/cf_user':
+        await cf_user_handle.finish('❌没有检测到参数\n\n请在指令后方输入参数，如 /cf_user tourist')
+    try:
+        handle = text.split(' ', 1)[1]
+    except:
+        await cf_user_handle.finish('❌参数获取失败\n\n正确输入参数的格式为 /cf_user handle')
     method_param = f'user.info?handles={handle}'
     # Start to request Info by CF API
     data_dict = await cf_request(method_param=method_param)
     if data_dict['status'] != 'OK':
+        print('Error: Failed to get info form codeforces.com')
         return ('error', 'error')
     user_info = data_dict['result'][0]
     # Dump data
@@ -93,6 +105,12 @@ async def get_user(handle: str, rating_info: bool = True):
 {str(user_info['rating'])}
 {str(user_info['maxRating'])}
 
-<a href="https://codeforces.com/profile/{user_info['handle']}">用户档案页面</a>
+https://codeforces.com/profile/{user_info['handle']}
 '''
-    return (user_info['titlePhoto'], re_text)
+    print('photo url:',user_info['titlePhoto'])
+    message = Message([MessageSegment(type='text', data={'text': 'CodeForces用户查询'}),
+                       MessageSegment(type='photo', data={'url': user_info['titlePhoto']}),
+                       MessageSegment(type='text', data={'text': re_text})])
+    await bot.send(event, message)
+    await cf_user_handle.finish()
+    # return (user_info['titlePhoto'], re_text)

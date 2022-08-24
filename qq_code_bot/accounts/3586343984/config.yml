@@ -99,7 +99,7 @@ database: # 数据库相关设置
 
 servers:
   - ws-reverse:
-      universal: "ws://127.0.0.1:8080/onebot/v11/ws"
+      universal: "ws://127.0.0.1:23456/onebot/v11/ws"
       reconnect-interval: 3000
       middlewares:
         <<: *default
