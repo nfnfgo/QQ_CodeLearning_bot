@@ -1,0 +1,194 @@
+{
+    "code": 200,
+    "currentTemplate": "UserShow",
+    "currentData": {
+        "user": {
+            "registerTime": 1659320736,
+            "introduction": null,
+            "prize": [],
+            "followingCount": 0,
+            "followerCount": 0,
+            "ranking": 126145,
+            "blogAddress": null,
+            "passedProblemCount": 14,
+            "submittedProblemCount": 90,
+            "uid": 764096,
+            "name": "NextFuture",
+            "slogan": null,
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Gray",
+            "ccfLevel": 0,
+            "background": ""
+        },
+        "passedProblems": [
+            {
+                "pid": "P1003",
+                "title": "[NOIP2011 提高组] 铺地毯",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P1004",
+                "title": "[NOIP2000 提高组] 方格取数",
+                "difficulty": 4,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P1035",
+                "title": "[NOIP2002 普及组] 级数求和",
+                "difficulty": 1,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P1046",
+                "title": "[NOIP2005 普及组] 陶陶摘苹果",
+                "difficulty": 1,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P1047",
+                "title": "[NOIP2005 普及组] 校门外的树",
+                "difficulty": 1,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P1427",
+                "title": "小鱼的数字游戏",
+                "difficulty": 1,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P1563",
+                "title": "[NOIP2016 提高组] 玩具谜题",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P1969",
+                "title": "[NOIP2013 提高组] 积木大赛",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P3612",
+                "title": "[USACO17JAN]Secret Cow Code S",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P4470",
+                "title": "[BJWC2018]售票",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P5019",
+                "title": "[NOIP2018 提高组] 铺设道路",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P5051",
+                "title": "[COCI2017-2018#7] Timovi",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P5116",
+                "title": "[USACO18DEC]Mixing Milk B",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P5657",
+                "title": "[CSP-S2019] 格雷码",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            }
+        ],
+        "submittedProblems": [
+            {
+                "pid": "CF4A",
+                "title": "Watermelon",
+                "difficulty": 1,
+                "fullScore": 100,
+                "type": "CF"
+            },
+            {
+                "pid": "P1016",
+                "title": "[NOIP1999 提高组] 旅行家的预算",
+                "difficulty": 4,
+                "fullScore": 200,
+                "type": "P"
+            },
+            {
+                "pid": "P2010",
+                "title": "[NOIP2016 普及组] 回文日期",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P3131",
+                "title": "[USACO16JAN]Subsequences Summing to Sevens S",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P5016",
+                "title": "[NOIP2018 普及组] 龙虎斗",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P5412",
+                "title": "[YNOI2019] 排队",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P5661",
+                "title": "[CSP-J2019] 公交换乘",
+                "difficulty": 2,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P8474",
+                "title": "「GLR-R3」立春",
+                "difficulty": 3,
+                "fullScore": 100,
+                "type": "P"
+            },
+            {
+                "pid": "P7676",
+                "title": "[COCI2013-2014#5] TROKUTI",
+                "difficulty": 5,
+                "fullScore": 140,
+                "type": "P"
+            }
+        ]
+    },
+    "currentTitle": "个人中心",
+    "currentTheme": null,
+    "currentTime": 1661428579
+}
