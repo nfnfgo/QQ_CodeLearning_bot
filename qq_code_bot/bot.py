@@ -5,7 +5,7 @@ import nonebot
 from nonebot.adapters.onebot.v11 import Adapter as ONEBOT_V11Adapter
 
 # Custom your logger
-# 
+#
 # from nonebot.log import logger, default_format
 # logger.add("error.log",
 #            rotation="00:00",
@@ -28,7 +28,7 @@ nonebot.load_plugin('nonebot_plugin_gocqhttp')
 nonebot.load_plugins('src/plugins')
 
 # Modify some config / config depends on loaded configs
-# 
+#
 # config = driver.config
 # do something...
 
