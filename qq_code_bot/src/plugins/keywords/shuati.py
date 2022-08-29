@@ -4,7 +4,7 @@ import time
 from nonebot import on_command,on_keyword
 from nonebot.adapters.onebot.v11 import Bot, Event
 
-shuati_handle = on_keyword(['刷题','刷点题','做题'],priority=200)
+shuati_handle = on_keyword(['/刷题','/刷点题','/做题'],priority=200)
 
 last_check_time = {0:0}
 
