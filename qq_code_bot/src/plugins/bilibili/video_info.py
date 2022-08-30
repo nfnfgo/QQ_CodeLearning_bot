@@ -79,6 +79,7 @@ async def get_video_info_read(video_info: str | int) -> list | None:
     title = v_info['title']
     cover_url = v_info['pic']
     desc = v_info['desc']
+    up_name = v_info['owner']['name']
     try:
         desc = desc[:desc_len]+'...'
     except Exception as e:
@@ -90,12 +91,13 @@ async def get_video_info_read(video_info: str | int) -> list | None:
     re_text = ''
     # Title and BV info
     re_text += f'''{title}
-
+————————————————
 发布于 {date}
-
+UP主: {up_name}
+————————————————
 简介:
 {desc}
-
+————————————————
 {v_info['bvid']} (av{v_info['aid']})
 '''
     return (re_text, cover_url)
