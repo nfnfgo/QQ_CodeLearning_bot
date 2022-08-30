@@ -76,9 +76,18 @@ async def get_video_info_read(video_info: str | int) -> list | None:
         print(e)
         return None
     # construct re_text info
+    print(v_info)
     title = v_info['title']
     cover_url = v_info['pic']
     desc = v_info['desc']
+    view=v_info['stat']['view']
+    like = v_info['stat']['like']
+    coin = v_info['stat']['coin']
+    fav = v_info['stat']['favorite']
+    try:
+        follower = f'''(粉丝: {v_info['staff'][0]['follower']})'''
+    except:
+        follower=''
     up_name = v_info['owner']['name']
     try:
         desc = desc[:desc_len]+'...'
@@ -93,7 +102,9 @@ async def get_video_info_read(video_info: str | int) -> list | None:
     re_text += f'''{title}
 ————————————————
 发布于 {date}
-UP主: {up_name}
+UP主: {up_name} {follower}
+▶️{view} 
+👍{like} 🪙{coin} ❤️{fav}
 ————————————————
 简介:
 {desc}

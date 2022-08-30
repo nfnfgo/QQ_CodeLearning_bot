@@ -1,3 +1,4 @@
 aiohttp
 wikipedia
 nb-cli
+bilibili-api-python
